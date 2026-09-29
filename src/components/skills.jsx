@@ -1,14 +1,19 @@
-
-
+import './skills.css'
 function Skills() {
+  const skills = [
+  "JavaScript",
+  "Git/Github",
+  "HTML/CSS",
+  "C++/C",
+  "Java"
+];
   return (
     <main>
       <h3>My Skills</h3>
-      <ul>
-        <li>Python</li>
-        <li>C++</li>
-        <li>C</li>
-        <li>Git/Github</li>
+      <ul className="skills">
+        {skills.map((skill, index) => (
+          <li key={index} >[{skill}]</li>
+        ))}
       </ul>
     </main>
   );

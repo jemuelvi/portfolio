@@ -3,6 +3,10 @@ body {
   color:white;
 }
 main {
-  color:black;
-  text-align: center;
+  text-align: justify;
+  
+}
+html {
+    scroll-behavior: smooth;
+    background-color: black;
 }

@@ -9,8 +9,8 @@ function App() {
   return(
     <main>
    <h1>Jemuel Villaret</h1>
-   <About/>
    <Skills/>
+   <About/>
     </main>
 
   )
