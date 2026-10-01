@@ -5,3 +5,20 @@ gap: 12px;
 list-style: none;
 padding: 0;
 }
+.skill-learning{
+display: flex;
+flex-wrap: wrap;
+gap: 12px;
+list-style: none;
+padding: 0;
+    font-weight: 400;
+    color:  #dc0000;}
+
+.skill-known{
+    display: flex;
+flex-wrap: wrap;
+gap: 12px;
+list-style: none;
+padding: 0;
+    font-weight: 400;
+    color: #8400ff;}

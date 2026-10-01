@@ -1,21 +1,38 @@
 import './skills.css'
+import SkillTag from './SkillTag.jsx'
 function Skills() {
   const skills = [
-  "JavaScript",
-  "Git/Github",
-  "HTML/CSS",
-  "C++/C",
-  "Java"
+  { type: "Known", name: "JavaScript" },
+  { type: "Known", name: "Git/Github" },
+  { type: "Known", name: "HTML/CSS" },
+  { type: "Known", name: "C++/C" },
+  { type: "Known", name: "Java" },
+  { type: "Learning", name: "React" },
+  {type: "Learning", name: "Node.js"},
+  {type:"Learning", name: "Godot Engine"},
 ];
   return (
-    <main>
+    <>
       <h3>My Skills</h3>
-      <ul className="skills">
+      <h4 className="skill-known"> Known</h4>
+      <ul className="skill-known">
         {skills.map((skill, index) => (
-          <li key={index} >[{skill}]</li>
+          skill.type==="Known" ? (
+            <li key={index} ><SkillTag name={skill.name} type={skill.type}/></li>
+          ) : null
+          
         ))}
       </ul>
-    </main>
+      <h4 className="skill-learning"> Learning</h4>
+      <ul className="skill-learning">
+        {skills.map((skill, index) => (
+          skill.type==="Learning" ? (
+            <li key={index} ><SkillTag name={skill.name} type={skill.type}/></li>
+          ) : null
+          
+        ))} 
+      </ul>
+    </>  
   );
 }
 
